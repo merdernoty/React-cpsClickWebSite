@@ -2,6 +2,11 @@ import React from 'react'
 import './Text.scss'
 function Text() {
   return (
+    <>
+    <div className='trans-main'>
+      <div className='trans1'></div>
+      <div className='trans2'></div>
+    </div>
     <div className='text-main'>
         <div className='text-box'>
             <div className='text'>
@@ -40,6 +45,7 @@ Health is important, which is why we want to give a warning. Be reasonable and l
             </div>
         </div>
     </div>
+    </>
   )
 }
 
