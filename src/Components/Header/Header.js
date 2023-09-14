@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.scss";
 function Header() {
+  const [Click, setClick] = useState(0)
+
   return (
     <div className="WrapperMain">
       <div className="WrapperHeader">
         <div className="WrapperBtn">
-          <button className="Btn">1</button>
+          <button onClick={() =>setClick(Click + 1)}className="Btn">{Click}</button>
           </div>
           <div className="WrapperPar">
             <div className="Parametr1">1</div>

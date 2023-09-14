@@ -11,5 +11,7 @@ function App() {
       <Header></Header>
       <Text></Text>
       <Footer></Footer>
-
+      </div>
+ );
+};
 export default App;
