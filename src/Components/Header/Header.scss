@@ -39,6 +39,26 @@ $Parametercolor: #9fa0ff;
         border-radius: 30px;
         border: 2px solid white;
         font-size: 40px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color:#8187DC;
+        }
+      
+        &:active {
+          animation: btn 0.7s ease;
+        }
+      
+        @keyframes btn {
+          0% { transform: translateX(0); }
+          25% { transform: translateX(-5px) rotate(5deg); }
+          50% { transform: translateX(5px) rotate(-5deg); }
+          75% { transform: translateX(-5px) rotate(5deg); }
+          100% { transform: translateX(0); }
+        }
+      }
       }
     }
 
@@ -55,9 +75,16 @@ $Parametercolor: #9fa0ff;
         margin: 0 20px 0 20px;
         position: absolute;
         bottom: 60px;
-        left:40px;
-        border-radius:25px;
+        left: 40px;
+        border-radius: 25px;
         text-align: center;
+
+        a {
+          position: absolute;
+          font-size: 20px;
+          left:55px;
+          top: 10px;
+        }
       }
       .Parametr2 {
         width: 191px;
@@ -68,7 +95,7 @@ $Parametercolor: #9fa0ff;
         position: absolute;
         left: 315px;
         bottom: 60px;
-        border-radius:25px;
+        border-radius: 25px;
         text-align: center;
       }
       .Parametr3 {
@@ -79,10 +106,16 @@ $Parametercolor: #9fa0ff;
         background-color: $Parametercolor;
         position: absolute;
         bottom: 60px;
-        right:40px;
-        border-radius:25px;
+        right: 40px;
+        border-radius: 25px;
         text-align: center;
+        a {
+          font-size: 20px;
+          position: absolute;
+          left: 55px;
+          top: 10px;
+        }
       }
     }
   }
-}
+
