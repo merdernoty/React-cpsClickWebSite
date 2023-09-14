@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$Maincolor: #bbadff;
+$Parametercolor: #9fa0ff;
+
+.WrapperMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .WrapperHeader {
+    display: flex;
+    flex-direction: column; /* Добавьте это свойство */
+    align-items: center;
+    position: relative;
+
+    .WrapperBtn {
+      width: 821px;
+      height: 478px;
+      flex-shrink: 0;
+      border-radius: 30px 30px 30px 30px;
+      background: rgba(238, 238, 238, 0.6);
+      backdrop-filter: blur(2px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 20px solid rgba(159, 160, 255, 0.4);
+      backdrop-filter: blur(2px);
+
+      .Btn {
+        margin-top: -100px;
+        background: $Maincolor;
+        width: 493px;
+        height: 209px;
+        filter: drop-shadow(10px 4px 4px rgba(159, 160, 255, 0.1));
+        border-radius: 30px;
+        border: 2px solid white;
+      }
+    }
+
+    .WrapperPar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .Parametr1 {
+        width: 191px;
+        height: 43px;
+        background-color: $Parametercolor;
+        flex-shrink: 0;
+        margin: 0 20px 0 20px;
+        position: absolute;
+        bottom: 60px;
+        left:40px;
+        border-radius:25px;
+        text-align: center;
+      }
+      .Parametr2 {
+        width: 191px;
+        height: 43px;
+        flex-shrink: 0;
+        margin: 0 20px 0 20px;
+        background-color: $Parametercolor;
+        position: absolute;
+        left: 315px;
+        bottom: 60px;
+        border-radius:25px;
+        text-align: center;
+      }
+      .Parametr3 {
+        width: 191px;
+        height: 43px;
+        flex-shrink: 0;
+        margin: 0 20px 0 20px;
+        background-color: $Parametercolor;
+        position: absolute;
+        bottom: 60px;
+        right:40px;
+        border-radius:25px;
+        text-align: center;
+      }
+    }
+  }
+}
