@@ -1,0 +1,25 @@
+.title-main{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.title-box{
+    background-color: #8187DC;
+    width: 523px;
+    height: 100px;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 5px 5px 5px 5px rgba(129, 135, 220, 0.3);
+
+}
+.title{
+    text-align: center;
+    color: #FFF;
+    font-family: Ponnala;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top:25px;
+}
