@@ -1,6 +1,6 @@
 import React from 'react'
-import './MainText.scss'
-function MainText() {
+import './Title.scss'
+function Title() {
   return (
     <div className='title-main'>
       <div className='title-box'>
@@ -10,4 +10,4 @@ function MainText() {
   )
 }
 
-export default MainText
+export default Title

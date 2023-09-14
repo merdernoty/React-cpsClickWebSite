@@ -1,9 +1,9 @@
 import './App.scss';
-import MainText from './Components/MainText/MainText';
+import MainText from './Components/Title/Title';
 function App() {
   return (
     <div className="App">
-        <MainText></MainText>
+        <Title></Title>
         
     </div>
   );
