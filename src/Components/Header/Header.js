@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Modal } from "./Modal/Modal";
 import "./Header.scss";
+import { ThemeContext } from "../../App";
+
 
 function Header() {
+
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const [clickCount, setClickCount] = useState(0);
   const [timeLeft, setTimeLeft] = useState(10);
   const [isCounting, setIsCounting] = useState(false);
@@ -41,7 +45,7 @@ function Header() {
   };
 
   return (
-    <div className="WrapperMain">
+    <div className="WrapperMain" id={theme}>
       <div className="WrapperHeader">
         <div className="WrapperBtn">
           <button onClick={handleClick} className="Btn"></button>

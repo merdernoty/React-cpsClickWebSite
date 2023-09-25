@@ -1,9 +1,13 @@
-import React from 'react'
+import React,{ useContext }from 'react'
 import './Text.scss'
+import { ThemeContext } from "../../App"
 function Text() {
+
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <>
-    <div className='trans-main'>
+    <div className='trans-main' id={theme}>
       <div className='trans1'></div>
       <div className='trans2'></div>
     </div>

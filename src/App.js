@@ -1,20 +1,40 @@
-
-import "./App.scss";
-import Title from "./Components/Title/Title";
-import Text from "./Components/Text/Text";
-import Footer from "./Components/Footer/Footer";
+import React, { useState, createContext } from 'react';
+import './App.scss';
+import Title from './Components/Title/Title';
+import Text from './Components/Text/Text';
+import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
-import Theme from './Components/Theme/Theme';
-function App() {
-  return (
-    <div className="App"> 
-      <Title></Title>
-      <Theme></Theme>
-      <Header></Header>
-      <Text></Text>
-      <Footer></Footer>
+import sunImage from './assets/img/png-clipart-emojis-yellow-sun-with-face-thumbnail-transformed 1.png';
+import moonImage from './assets/img/moon.png';
 
-      </div>
- );
-};
+export const ThemeContext = React.createContext({ theme: 'light' });
+
+function App() {
+  const [theme, setTheme] = useState('light');
+  const [pic, setPick] = useState(sunImage);
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
+    setPick((item) => (item === sunImage ? moonImage : sunImage));
+  };
+
+  return (
+    <>
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <div className="App" id={theme}>
+          <Title />
+          <div className="theme-main">
+            <button className="theme-box" id={theme} onClick={toggleTheme}>
+              <img src={pic} alt="Theme Icon" className='imgtheme'/>
+            </button>
+          </div>
+          <Header />
+          <Text />
+          <Footer />
+        </div>
+      </ThemeContext.Provider>
+    </>
+  );
+}
+
 export default App;
