@@ -25,7 +25,7 @@ function Header() {
     };
 
     if (isCounting) {
-      timer = setInterval(countdown, 1000);
+      timer = setInterval(countdown, 999);
     }
 
     return () => {
@@ -52,8 +52,7 @@ function Header() {
               Timer: <b>{timeLeft === 0 ? 0 : timeLeft}</b>
             </a>
           </div>
-          <div className="Parametr2">{clickCount}</div>
-          <div className="Parametr3">
+          <div className="Parametr3" >
             <a>
               Score: <b>{clickCount}</b>
             </a>
