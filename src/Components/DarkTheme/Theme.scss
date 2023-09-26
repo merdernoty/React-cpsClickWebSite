@@ -1,0 +1,93 @@
+#light{
+    background-color:white ;
+}
+#dark{
+    background-color:#14213D ;
+}
+.theme-box{
+    width: 60px;
+    height: 53px;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(142, 148, 242, 0.45);
+    display:flex;
+    justify-content: center;
+    border:none;
+
+}
+.theme-main{
+    position:fixed;
+    right:100px;
+    top:90px;
+    
+
+
+}
+.theme-box:hover{
+    cursor: pointer;
+}
+.imgtheme{
+    margin-top:5px
+
+}
+
+#dark .theme-box{
+    background-color:#FCA311 ;
+
+}
+#dark .title-box{
+    background-color:#FCA311;
+    color:#14213D;
+}
+#dark  .text-box{
+    background-color:rgba(214, 214, 214,0.85) ;
+    border: 20px solid #D6D6D6;
+}
+#dark .title{
+    color:#14213D;
+}
+#dark .footerbox{
+    color:#E3E0E0
+}
+#dark .trans1{
+    background-color: #FCA311;
+}
+#dark .trans2{
+    background-color:#D6D6D6;
+}
+#dark .Parametr1{
+    background-color: #FCA311;
+}
+
+#dark .Parametr2{
+    background-color: #FCA311;
+}
+
+#dark .Parametr3{
+    background-color: #FCA311;
+}
+#dark  .WrapperBtn{
+    border: 20px solid rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#dark  .Btn{
+    background-color: #FCA311;
+}
+#dark .Timer{
+    background-color:black ;
+    box-shadow: 0px 4px 1px 0px rgba(0, 0, 0, 0.35);
+
+}
+#dark .TimerHead{
+    background-color: #FCA311;
+    box-shadow: 0px 4px 1px 0px rgba(0, 0, 0, 0.01);
+}
+#dark .TimerText{
+    background-color: black;
+    
+    .active{
+        background-color: #FCA311;  
+    }
+    
+
+}

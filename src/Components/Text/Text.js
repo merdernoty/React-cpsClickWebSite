@@ -1,7 +1,18 @@
-import React from 'react'
+import React,{ useContext }from 'react'
 import './Text.scss'
+import { ThemeContext } from "../DarkTheme/Theme"
+import "../DarkTheme/Theme.scss";
+
 function Text() {
+
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
+    <>
+    <div className='trans-main' id={theme}>
+      <div className='trans1'></div>
+      <div className='trans2'></div>
+    </div>
     <div className='text-main'>
         <div className='text-box'>
             <div className='text'>
@@ -40,6 +51,7 @@ Health is important, which is why we want to give a warning. Be reasonable and l
             </div>
         </div>
     </div>
+    </>
   )
 }
 

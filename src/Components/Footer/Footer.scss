@@ -1,11 +1,13 @@
-ul{
-    display: flex;
-    text-align: center; 
-    justify-content: space-between;
-    margin-left:  820px;
-    margin-right: 820px;
-    margin-top:40px;
-    margin-bottom:60px;
-    font-family: 'Ponnala';
-    list-style: none;
+.footerbox{
+    justify-content: center;
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    
+
+}
+.footer-text{
+    font-size:16;
+    margin:10px 10px 10px 10px;
+    width: 170px;
 }
