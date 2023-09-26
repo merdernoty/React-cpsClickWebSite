@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Modal } from "./Modal/Modal";
 import "./Header.scss";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../DarkTheme/Theme";
 
 
 function Header() {

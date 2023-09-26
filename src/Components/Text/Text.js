@@ -1,6 +1,8 @@
 import React,{ useContext }from 'react'
 import './Text.scss'
-import { ThemeContext } from "../../App"
+import { ThemeContext } from "../DarkTheme/Theme"
+import "../DarkTheme/Theme.scss";
+
 function Text() {
 
   const { theme, toggleTheme } = useContext(ThemeContext);
