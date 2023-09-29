@@ -1,25 +1,33 @@
-import React, {useContext,useState}from "react";
+import React, { useContext } from "react";
 import "./Timer.scss";
 import { ThemeContext } from "../DarkTheme/Theme";
 import "../DarkTheme/Theme.scss";
 
+export const seconds = [
+  { timeing: 1, indexProp: 0 },
+  { timeing: 5, indexProp: 1 },
+  { timeing: 15, indexProp: 2 },
+  { timeing: 30, indexProp: 3 },
+  { timeing: 60, indexProp: 4 },
+];
+
 function Timer({ value, onClickTimer }) {
-  const seconds = [1, 5, 15, 30, 60];
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <div className="TimerMain" id={theme}>
-      <ul className="Timer" >
-        
+      <ul className="Timer">
         <div className="TimerText">
-            
-        {seconds.map((timer, index) => (
-          <li key={index} onClick={() => onClickTimer(index)} className={value===index? 'active':''}>
-            {timer}
-          </li>
-        ))}
+          {seconds.map((obj, index) => (
+            <li
+              key={index}
+              onClick={() => onClickTimer(obj)}
+              className={value.indexProp === obj.indexProp ? "active" : ""}
+            >
+              {obj.timeing} SEC
+            </li>
+          ))}
         </div>
       </ul>
-      <div className="TimerHead">SEC</div>
     </div>
   );
 }

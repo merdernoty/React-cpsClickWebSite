@@ -2,34 +2,37 @@ import React, { useState, useEffect, useContext } from "react";
 import { Modal } from "./Modal/Modal";
 import "./Header.scss";
 import { ThemeContext } from "../DarkTheme/Theme";
-
+import Timer from "../Timer/Timer";
 
 function Header() {
-
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [clickCount, setClickCount] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(10);
   const [isCounting, setIsCounting] = useState(false);
   const [modalActive, setModalActive] = useState(false);
+
+  const [timeLeft, setTimeLeft] = useState({
+    timeing: 1,
+    indexProp: 0,
+  });
 
   useEffect(() => {
     let timer;
 
     const countdown = () => {
-      if (timeLeft > 0) {
-        setTimeLeft(timeLeft - 1);
+      if (timeLeft.timeing > 0) {
+        setTimeLeft({ ...timeLeft, timeing: timeLeft.timeing - 1 });
       } else {
         // Когда время истекло, устанавливаем modalActive в true
-       setModalActive(true);
+        setModalActive(true);
         clearInterval(timer);
         setIsCounting(false);
         setClickCount(0);
-        setTimeLeft(10);
+        setTimeLeft({ timeing: 1, indexProp: 0 });
       }
     };
 
     if (isCounting) {
-      timer = setInterval(countdown, 999);
+      timer = setInterval(countdown, 700);
     }
 
     return () => {
@@ -53,13 +56,19 @@ function Header() {
         <div className="WrapperPar">
           <div className="Parametr1">
             <a>
-              Timer: <b>{timeLeft === 0 ? 0 : timeLeft}</b>
+              Timer: <b>{timeLeft.timeing === 0 ? 0 : timeLeft.timeing}</b>
             </a>
           </div>
-          <div className="Parametr3" >
+          <div className="Parametr3">
             <a>
               Score: <b>{clickCount}</b>
             </a>
+          </div>
+          <div>
+            <Timer
+              value={timeLeft}
+              onClickTimer={(obj) => setTimeLeft(obj)}
+            ></Timer>
           </div>
         </div>
       </div>
