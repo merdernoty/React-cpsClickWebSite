@@ -9,9 +9,10 @@ function Header() {
   const [clickCount, setClickCount] = useState(0);
   const [isCounting, setIsCounting] = useState(false);
   const [modalActive, setModalActive] = useState(false);
-
+  const [maxCount, setMaxCount] = useState(0);
+  const [maxTime, setMaxTime] = useState(0);
   const [timeLeft, setTimeLeft] = useState({
-    timeing: 1,
+    timeing: maxTime,
     indexProp: 0,
   });
 
@@ -21,30 +22,38 @@ function Header() {
     const countdown = () => {
       if (timeLeft.timeing > 0) {
         setTimeLeft({ ...timeLeft, timeing: timeLeft.timeing - 1 });
+        if (timeLeft.timeing >= maxTime) {
+          setMaxTime(timeLeft.timeing);
+        }
       } else {
-        // Когда время истекло, устанавливаем modalActive в true
         setModalActive(true);
         clearInterval(timer);
         setIsCounting(false);
         setClickCount(0);
-        setTimeLeft({ timeing: 1, indexProp: 0 });
+        setTimeLeft({ timeing: maxTime, indexProp: 0 });
+        setMaxTime(0);
+        
       }
     };
 
     if (isCounting) {
-      timer = setInterval(countdown, 700);
+      timer = setInterval(countdown, 1000);
     }
 
     return () => {
       clearInterval(timer);
     };
-  }, [isCounting, timeLeft]);
+  }, [isCounting, timeLeft, maxTime]);
 
   const handleClick = () => {
     if (!isCounting) {
+      setMaxCount(0)
       setIsCounting(true);
     }
     setClickCount(clickCount + 1);
+    if (clickCount >= maxCount) {
+      setMaxCount(clickCount);
+    }
   };
 
   const handleTimerClick = (selectedTime) => {
@@ -70,15 +79,19 @@ function Header() {
             </a>
           </div>
           <div>
-            <Timer
-              value={timeLeft}
-              onClickTimer={(obj) => setTimeLeft(obj)}
-            ></Timer>
+            <Timer value={timeLeft} onClickTimer={(obj) => setTimeLeft(obj)} />
           </div>
         </div>
         <Timer value={timeLeft} onClickTimer={handleTimerClick} />
       </div>
-      {modalActive && <Modal active={modalActive} setActive={setModalActive} />}
+      {modalActive && (
+        <Modal
+          active={modalActive}
+          setActive={setModalActive}
+          value={maxCount}
+          timer={timeLeft.timeing}
+        />
+      )}
     </div>
   );
 }
