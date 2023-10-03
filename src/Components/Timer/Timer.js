@@ -3,26 +3,31 @@ import "./Timer.scss";
 import { ThemeContext } from "../DarkTheme/Theme";
 import "../DarkTheme/Theme.scss";
 
-function Timer({ value, onClickTimer }) {
-  const seconds = [1, 5, 10, 15, 30, 60];
-  const { theme } = useContext(ThemeContext);
+export const seconds = [
+  { timeing: 1, indexProp: 0 },
+  { timeing: 5, indexProp: 1 },
+  { timeing: 15, indexProp: 2 },
+  { timeing: 30, indexProp: 3 },
+  { timeing: 60, indexProp: 4 },
+];
 
+function Timer({ value, onClickTimer }) {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <div className="TimerMain" id={theme}>
       <ul className="Timer">
         <div className="TimerText">
-          {seconds.map((timer, index) => (
+          {seconds.map((obj, index) => (
             <li
               key={index}
-              onClick={() => onClickTimer(timer)}
-              className={value === timer ? "active" : ""}
+              onClick={() => onClickTimer(obj)}
+              className={value.indexProp === obj.indexProp ? "active" : ""}
             >
-              {timer}
+              {obj.timeing} SEC
             </li>
           ))}
         </div>
       </ul>
-      <div className="TimerHead">SEC</div>
     </div>
   );
 }
