@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState} from 'react';
 import './Theme.scss';
 import sunImage from '../../assets/img/png-clipart-emojis-yellow-sun-with-face-thumbnail-transformed 1.png'
 import moonImage from '../../assets/img/moon.png'
@@ -7,6 +7,7 @@ import Text from '../Text/Text';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Timer from '../Timer/Timer'
+import Spheres from '../Spheres/Spheres';
 
 export const ThemeContext = React.createContext({ theme: 'light' });
 
@@ -26,6 +27,7 @@ function Theme() {
   return (
     <>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <Spheres></Spheres>
         <div className="App" id={theme}>
           <Title />
           <Timer value={timer} onClickTimer={(index)=>
