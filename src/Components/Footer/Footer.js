@@ -1,9 +1,8 @@
-import React,{useContext}from "react";
+import React, { useContext } from "react";
 import "./Footer.scss";
 import { ThemeContext } from "../DarkTheme/Theme";
 function Footer() {
-
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div className="footerbox" id={theme}>

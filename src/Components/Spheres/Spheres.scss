@@ -1,0 +1,34 @@
+.SpheresWrapper {
+  display: flex;
+
+  .Spheres_1 {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #9fa0ff 26.23%, rgba(0, 0, 0, 0) 100%),
+      #4652b1;
+    border-radius: 50%;
+    margin: 85px 0 0 340px;
+  }
+  .Spheres_2 {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #9fa0ff 0%, rgba(0, 0, 0, 0) 100%),
+      #4652b1;
+    border-radius: 50%;
+    margin: 770px 0 0 415px;
+  }
+  .Spheres_3 {
+    position: fixed;
+    width: 260px;
+    height: 260px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #9fa0ff 0%, rgba(0, 0, 0, 0) 100%),
+      #4652b1;
+    border-radius: 50%;
+    margin: 340px 0 0 1200px;
+  }
+}

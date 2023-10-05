@@ -5,7 +5,7 @@ import { ThemeContext } from "../DarkTheme/Theme";
 import Timer from "../Timer/Timer";
 
 function Header() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const [clickCount, setClickCount] = useState(0);
   const [isCounting, setIsCounting] = useState(false);
   const [modalActive, setModalActive] = useState(false);
@@ -69,14 +69,14 @@ function Header() {
         </div>
         <div className="WrapperPar">
           <div className="Parametr1">
-            <a>
+            <span>
               Timer: <b>{timeLeft.timeing === 0 ? 0 : timeLeft.timeing}</b>
-            </a>
+            </span>
           </div>
           <div className="Parametr3">
-            <a>
+            <span>
               Score: <b>{clickCount}</b>
-            </a>
+            </span>
           </div>
           <div>
             <Timer value={timeLeft} onClickTimer={(obj) => setTimeLeft(obj)} />

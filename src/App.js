@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React from 'react';
 import './App.scss';
 import DarkTheme from './Components/DarkTheme/Theme';
 

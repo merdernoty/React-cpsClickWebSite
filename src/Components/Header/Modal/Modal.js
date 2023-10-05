@@ -87,6 +87,7 @@ export const Modal = ({ active, setActive, value, timer }) => {
               />
             </button>
             <div className="Wrapper-Modal">
+
               <div className="modulContent">
                 {imageToShow && (
                   <img className="resultPic" src={imageToShow} alt="Lighting" />
