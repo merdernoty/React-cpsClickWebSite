@@ -20,13 +20,13 @@ export const Modal = ({ active, setActive }) => {
                 height="30"
                 src="https://img.icons8.com/ios/50/multiply.png"
                 alt="multiply"
-              />{" "}
+              />
             </button>
             <div className="Wrapper-Modal">
               <div className="TitleText" >
-                <a>
+                <span>
                   You are <b className="boldRusult">Thunder Cliker</b> 
-                </a>
+                </span>
               </div>
             </div>
           </div>

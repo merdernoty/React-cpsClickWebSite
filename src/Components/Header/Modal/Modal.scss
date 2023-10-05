@@ -1,78 +1,72 @@
 $Maincolor: #bbadff;
 
 .modal {
-    /* Стили для модального окна без класса .active */
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1001;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.5s;
-    
-      
-    &.active {
-      /* Стили для модального окна с классом .active */
-      opacity: 1;
-      pointer-events: all;
-    }
-  }
-  
-  .modal__content {
-    /* Стили для контента модального окна без класса .active */
-    padding: 20px;
-    border-radius: 20px 20px 20px 20px;
-    background-color: white;
-    height: 400px;
-    width: 600px;
-    border: 12px solid $Maincolor;
-    transform: scale(0.5);
-    transition: 0.4s all;
-  
-    &.active {
-      /* Стили для контента модального окна с классом .active */
-      transform: scale(1);
-    }
-  }
+  /* Стили для модального окна без класса .active */
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
 
-
-  .Btn-Wrapper{
-    display: flex;
-    justify-content: flex-end;
-    align-items: end;
+  &.active {
+    /* Стили для модального окна с классом .active */
+    opacity: 1;
+    pointer-events: all;
   }
+}
 
-  .btn-close{
-    border: none;
-    background-color: white;
-    
+.modal__content {
+  /* Стили для контента модального окна без класса .active */
+  padding: 20px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  height: 400px;
+  width: 600px;
+  border: 12px solid $Maincolor;
+  transform: scale(0.5);
+  transition: 0.4s all;
+
+  &.active {
+    /* Стили для контента модального окна с классом .active */
+    transform: scale(1);
   }
-  .btn-close:hover{
-    border: none;
-    background-color: rgb(194, 194, 194);
-    border-radius: 12px;
-  }
+}
 
-  .boldRusult{
-    color: $Maincolor;
-  }
+.Btn-Wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 
-  .Wrapper-Modal { 
-    position: relative;
-  }
-  .TitleText{
-    position: absolute;
-    width: 600px;
-    left: -515px;
-    font-size: 30px;
-    top:70px;
-  }
+.btn-close {
+  border: none;
+  background-color: white;
+}
+.btn-close:hover {
+  border: none;
+  background-color: rgb(194, 194, 194);
+  border-radius: 12px;
+}
 
+.boldRusult {
+  color: $Maincolor;
+}
 
-
+.Wrapper-Modal {
+  position: relative;
+}
+.TitleText {
+  position: absolute;
+  width: 600px;
+  left: -515px;
+  font-size: 30px;
+  top: 70px;
+}

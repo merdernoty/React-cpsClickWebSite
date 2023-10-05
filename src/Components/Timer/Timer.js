@@ -12,7 +12,7 @@ export const seconds = [
 ];
 
 function Timer({ value, onClickTimer }) {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="TimerMain" id={theme}>
       <ul className="Timer">
