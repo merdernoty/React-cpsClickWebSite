@@ -32,7 +32,7 @@ function Header() {
     };
 
     if (isCounting) {
-      timer = setInterval(countdown, 700);
+      timer = setInterval(countdown, 999);
     }
 
     return () => {
