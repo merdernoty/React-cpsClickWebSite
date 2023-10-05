@@ -92,7 +92,7 @@ $Maincolor: #bbadff;
   width: 140px;
   border-radius: 10px;
   padding-left: 20px;
-  margin-top: 40px;
+  margin-top: 25px;
   padding-top: 10px;
   margin-left: -10px;
 }
@@ -100,4 +100,16 @@ $Maincolor: #bbadff;
   background-color:rgba(159, 160, 255, 1)!important;
   cursor: pointer;
   transition: 0.2s all;
+}
+.textScoreWrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .firstText{
+
+  }
+  .secondText{
+    margin-left:70px;
+    margin-top:10px ;
+  }
 }
