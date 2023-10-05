@@ -4,12 +4,13 @@ import { ThemeContext } from "../DarkTheme/Theme";
 import "../DarkTheme/Theme.scss";
 
 export const seconds = [
-  { timeing: 1, indexProp: 0 },
-  { timeing: 5, indexProp: 1 },
+  { timeing: 5, indexProp:  0 },
+  { timeing: 10, indexProp: 1 },
   { timeing: 15, indexProp: 2 },
   { timeing: 30, indexProp: 3 },
   { timeing: 60, indexProp: 4 },
 ];
+
 
 function Timer({ value, onClickTimer }) {
   const { theme, toggleTheme } = useContext(ThemeContext);

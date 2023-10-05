@@ -1,93 +1,151 @@
-#light{
-    background-color:white ;
+#light {
+  background-color: white;
 }
-#dark{
-    background-color:#14213D ;
+#dark {
+  background-color: #14213d;
 }
-.theme-box{
-    width: 60px;
-    height: 53px;
-    border-radius: 15px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(142, 148, 242, 0.45);
-    display:flex;
-    justify-content: center;
-    border:none;
-
+.theme-box {
+  width: 60px;
+  height: 53px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(142, 148, 242, 0.45);
+  display: flex;
+  justify-content: center;
+  border: none;
 }
-.theme-main{
-    position:fixed;
-    right:100px;
-    top:90px;
-    
-
-
+.theme-main {
+  position: fixed;
+  right: 100px;
+  top: 90px;
 }
-.theme-box:hover{
-    cursor: pointer;
+.theme-box:hover {
+  cursor: pointer;
 }
-.imgtheme{
-    margin-top:5px
-
+.imgtheme {
+  margin-top: 5px;
 }
 
-#dark .theme-box{
-    background-color:#FCA311 ;
-
+#dark .theme-box {
+  background-color: #fca311;
 }
-#dark .title-box{
-    background-color:#FCA311;
-    color:#14213D;
+#dark .title-box {
+  background-color: #fca311;
+  color: #14213d;
 }
-#dark  .text-box{
-    background-color:rgba(214, 214, 214,0.85) ;
-    border: 20px solid #D6D6D6;
+#dark .text-box {
+  background-color: rgba(214, 214, 214, 0.85);
+  border: 20px solid #d6d6d6;
 }
-#dark .title{
-    color:#14213D;
+#dark .title {
+  color: #14213d;
 }
-#dark .footerbox{
-    color:#E3E0E0
+#dark .footerbox {
+  color: #e3e0e0;
 }
-#dark .trans1{
-    background-color: #FCA311;
+#dark .trans1 {
+  background-color: #fca311;
 }
-#dark .trans2{
-    background-color:#D6D6D6;
+#dark .trans2 {
+  background-color: #d6d6d6;
 }
-#dark .Parametr1{
-    background-color: #FCA311;
-}
-
-#dark .Parametr2{
-    background-color: #FCA311;
+#dark .Parametr1 {
+  background-color: #fca311;
 }
 
-#dark .Parametr3{
-    background-color: #FCA311;
+#dark .Parametr2 {
+  background-color: #fca311;
 }
-#dark  .WrapperBtn{
-    border: 20px solid rgba(0, 0, 0, 1);
-    background-color: rgba(0, 0, 0, 0.4);
-}
-#dark  .Btn{
-    background-color: #FCA311;
-}
-#dark .Timer{
-    background-color:black ;
-    box-shadow: 0px 4px 1px 0px rgba(0, 0, 0, 0.35);
 
+#dark .Parametr3 {
+  background-color: #fca311;
 }
-#dark .TimerHead{
-    background-color: #FCA311;
-    box-shadow: 0px 4px 1px 0px rgba(0, 0, 0, 0.01);
+#dark .WrapperBtn {
+  border: 20px solid rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-#dark .TimerText{
-    background-color: black;
-    
-    .active{
-        background-color: #FCA311;  
-    }
-    
+#dark .Btn {
+  background-color: #fca311;
+}
+#dark .Timer {
+  background-color: black;
+  box-shadow: 0px 4px 1px 0px rgba(0, 0, 0, 0.35);
+}
+#dark .TimerHead {
+  background-color: #fca311;
+  box-shadow: 0px 4px 1px 0px rgba(0, 0, 0, 0.01);
+}
+#dark .TimerText {
+  background-color: black;
 
+  .active {
+    background-color: #fca311;
+  }
+}
+#dark .modal {
+  /* Стили для модального окна без класса .active */
+
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #fff;
+
+  &.active {
+    /* Стили для модального окна с классом .active */
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#dark .modal__content {
+  /* Стили для контента модального окна без класса .active */
+  padding: 20px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #14213d;
+  height: 400px;
+  width: 600px;
+  border: 12px solid rgba(0, 0, 0, 0.4);
+  transform: scale(0.5);
+  transition: 0.4s all;
+
+  &.active {
+    /* Стили для контента модального окна с классом .active */
+    transform: scale(1);
+  }
+}
+#dark.btn-close {
+  border: none;
+  background-color: #14213d;
+}
+#dark .btn-close:hover {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+}
+#dark .tryAgain {
+  border: 5px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  height: 50px;
+  width: 140px;
+  border-radius: 10px;
+  padding-left: 20px;
+  margin-top: 40px;
+  padding-top: 10px;
+  margin-left: -10px;
+}
+
+#dark.tryAgain:hover {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  cursor: pointer;
+  transition: 0.2s all;
 }

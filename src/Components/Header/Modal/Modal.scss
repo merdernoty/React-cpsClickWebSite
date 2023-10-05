@@ -1,82 +1,103 @@
 $Maincolor: #bbadff;
 
 .modal {
-    /* Стили для модального окна без класса .active */
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1001;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.5s;
-    
-      
-    &.active {
-      /* Стили для модального окна с классом .active */
-      opacity: 1;
-      pointer-events: all;
-    }
-  }
-  
-  .modal__content {
-    /* Стили для контента модального окна без класса .active */
-    padding: 20px;
-    border-radius: 20px 20px 20px 20px;
-    background-color: white;
-    height: 400px;
-    width: 600px;
-    border: 12px solid $Maincolor;
-    transform: scale(0.5);
-    transition: 0.4s all;
-  
-    &.active {
-      /* Стили для контента модального окна с классом .active */
-      transform: scale(1);
-    }
-  }
+  /* Стили для модального окна без класса .active */
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1002;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.4) !important;
 
-
-  .Btn-Wrapper{
-    display: flex;
-    justify-content: flex-end;
-    align-items: end;
+  &.active {
+    /* Стили для модального окна с классом .active */
+    opacity: 1;
+    pointer-events: all;
   }
-
-  .btn-close{
-    border: none;
-    background-color: white;
-    
-  }
-  .btn-close:hover{
-    border: none;
-    background-color: rgb(194, 194, 194);
-    border-radius: 12px;
-  }
-
-  .boldRusult{
-    color: $Maincolor;
-  }
-
-  .Wrapper-Modal { 
-    position: relative;
-  }
-  .modulContent{
-    position: absolute;
-    width: 600px;
-    left: -515px;
-    font-size: 30px;
-    top:70px;
-    margin-left:60px;
-    
-  }
-.lighting{
-  margin-left:45px;
 }
 
+.modal__content {
+  /* Стили для контента модального окна без класса .active */
+  padding: 20px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  height: 400px;
+  width: 600px;
+  border: 12px solid $Maincolor;
+  transform: scale(0.5);
+  transition: 0.4s all;
 
+  &.active {
+    /* Стили для контента модального окна с классом .active */
+    transform: scale(1);
+  }
+}
+
+.Btn-Wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.btn-close {
+  border: none;
+  background-color: white;
+}
+.btn-close:hover {
+  border: none;
+  background-color: rgb(194, 194, 194);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.boldRusult {
+  color: $Maincolor;
+}
+
+.Wrapper-Modal {
+  position: relative;
+  p {
+    position: relative;
+    left: 63px;
+  }
+}
+.modulContent {
+  position: absolute;
+  width: 600px;
+  left: -515px;
+  font-size: 30px;
+  top: 70px;
+  margin-left: 70px;
+  margin-top: -40px;
+}
+.resultPic {
+  height: 180px;
+  width: auto;
+  margin-top: -15px;
+  margin-left: 45px;
+  max-width: 260px;
+  max-height: 260px;
+}
+.tryAgain {
+  border: 5px solid rgba(159, 160, 255, 0.5);
+  background-color:rgba(159, 160, 255, 0.5)!important;
+  height: 50px;
+  width: 140px;
+  border-radius: 10px;
+  padding-left: 20px;
+  margin-top: 40px;
+  padding-top: 10px;
+  margin-left: -10px;
+}
+.tryAgain:hover {
+  background-color:rgba(159, 160, 255, 1)!important;
+  cursor: pointer;
+  transition: 0.2s all;
+}

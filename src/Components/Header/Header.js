@@ -10,7 +10,7 @@ function Header() {
   const [isCounting, setIsCounting] = useState(false);
   const [modalActive, setModalActive] = useState(false);
   const [maxCount, setMaxCount] = useState(0);
-  const [maxTime, setMaxTime] = useState(0);
+  const [maxTime, setMaxTime] = useState(5);
   const [timeLeft, setTimeLeft] = useState({
     timeing: maxTime,
     indexProp: 0,
